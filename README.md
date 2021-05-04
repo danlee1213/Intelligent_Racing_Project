@@ -11,6 +11,10 @@ It is really important to handle the car movement at the intersection on the mid
 The algorithm must ensure that the car is automatically guided straightfoward at the intersection, not to move left or right.
 
 ## Hardware
+i.MX RT1052 Crossover MCU with ARM Cortex-M7 Core has been used.
 
+[Technical Data i.MX RT1050](https://www.nxp.com/docs/en/data-sheet/IMXRT1050CEC.pdf)
+
+[Reference Manual](https://drive.google.com/file/d/1-84KOASvyucwciEcXKLrr0VAlIWJbvv-/view?usp=sharing)
 
 
