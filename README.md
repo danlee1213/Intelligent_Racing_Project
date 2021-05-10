@@ -148,4 +148,8 @@ Using same algorithm, in the case of left corner, differenceIndex has a negative
 
 #### 3. Crossroad
 <img src=https://user-images.githubusercontent.com/72503871/117620341-006f1e80-b1a3-11eb-88ae-be3d2d54fc84.jpg width="400">  
-The biggest advantage of this algorithm is that it doesn't need to come up with a new algorithm for the crossroad part. It just behaves sames as straight road, which has almost zero value of differenceIndex. Therefore, when it detects crossroad, it would recognize it as a straight road, moving the car to the straight until it meetes another left or right corner. 
+The biggest advantage of this algorithm is that it doesn't need to come up with a new algorithm for the crossroad part. It just behaves sames as straight road, which has almost zero value of differenceIndex. Therefore, when it detects crossroad, it would recognize it as a straight road, moving the car to the straight until it meets another left or right corner. 
+
+### Performance
+#### 1. Normal direction
+<iframe width="956" height="538" src="https://www.youtube.com/embed/ozv4q2ov3Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
