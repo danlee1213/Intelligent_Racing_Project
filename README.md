@@ -152,4 +152,5 @@ The biggest advantage of this algorithm is that it doesn't need to come up with 
 
 ### Performance
 #### 1. Normal direction
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HOtNWDeCSoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Normal Direction](http://img.youtube.com/vi/HOtNWDeCSoY/0.jpg)](https://youtu.be/HOtNWDeCSoY=0s) 
+
