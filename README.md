@@ -154,3 +154,6 @@ The biggest advantage of this algorithm is that it doesn't need to come up with 
 #### 1. Normal direction
 [![Normal Direction](http://img.youtube.com/vi/HOtNWDeCSoY/0.jpg)](https://youtu.be/HOtNWDeCSoY=0s) 
 
+#### 2. Reverse direction
+[![Reverse Direction](http://img.youtube.com/vi/LLPAd855nyI/0.jpg)](https://youtu.be/LLPAd855nyI=0s) 
+
