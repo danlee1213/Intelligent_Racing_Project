@@ -82,4 +82,7 @@ for(int y=1; y<imgHeight-1; y++){
 
 ### How to recognize left, right corner and crossroad?
 
+#### 1. Right corner
+
+
                                                                                                                       
