@@ -83,6 +83,64 @@ for(int y=1; y<imgHeight-1; y++){
 ### How to recognize left, right corner and crossroad?
 
 #### 1. Right corner
+<img src=https://user-images.githubusercontent.com/72503871/117615835-e16d8e00-b19c-11eb-842b-5e0efc1908a0.jpg width="400">                                                       
 
+```C++
+int centreX = imgWidth/2;
+//Bottom line
+int leftX, rightX;
+int leftThirdX, rightThirdX;
+float leftPercentage = 0.34, rightPercentage = 0.66;
+//Left and Right third
+int leftY, rightY, differenceIndex, differenceSquaredIndex;
+//Thresholds
+const uint16_t leftMax = 600, rightMax = 650, speedMax = 995; //small batt: 985; large: 979
 
+//Get bottom left and right edges' x-coord
+leftX = centreX, rightX = centreX;
+while (sobel[imgHeight - 1][leftX] != 255 && leftX > 1) {
+	leftX--;
+}
+while (sobel[imgHeight - 1][rightX] != 255 && rightX < imgWidth - 2) {
+	rightX++;
+}
+leftThirdX = round((rightX - leftX) * leftPercentage);
+rightThirdX = round((rightX - leftX) * rightPercentage);
+```
+Scanning the image and determine the indices for turning:
+```C++
+//Calculate indices for turning
+int leftY = imgHeight - 1, rightY = imgHeight - 1;
+int tempLeftThirdX = leftThirdX, tempRightThirdX = rightThirdX;
+while (sobel[leftY][leftThirdX] != 255 && leftY > 1) {
+	leftY--;
+	tempLeftThirdX++;
+	if (tempLeftThirdX >= leftThirdX + 25) {
+		leftThirdX++;
+		tempLeftThirdX = leftThirdX;
+	}
+}
+while (sobel[rightY][rightThirdX] != 255 && rightY > 1) {
+	rightY--;
+	tempRightThirdX--;
+	if (tempRightThirdX <= rightThirdX - 25) {
+		rightThirdX--;
+		tempRightThirdX = rightThirdX;
+	}
+}
+differenceIndex = round((rightY - leftY) / 2); //Now determine left or right corner
+differenceSquaredIndex = round((pow(rightY, 2) - pow(leftY, 2)) * 3); //For higher accuracy
+		
+//Motor and Servo
+if (differenceSquaredIndex < -leftMax) {
+	differenceSquaredIndex = -leftMax; //Keep the threshold
+} else if (differenceSquaredIndex > rightMax) {
+	differenceSquaredIndex = rightMax; //Keep the threshold
+}
+servo.SetDegree(900 + differenceSquaredIndex);
+motor.SetDegree(speedMax - round(sqrt(pow(differenceIndex, 2)) * 0.58));
+```
+Simply speaking, in the case of right corner, differenceIndex has a positive value(rightY > leftY). So now camera recognizes it as a right corner and try to move the car to the right based on the servo degree determined by differenceSquaredIndex.
                                                                                                                       
+#### 2. Left corner
+<img src=https://user-images.githubusercontent.com/72503871/117618362-6908cc00-b1a0-11eb-8600-6a383e2d4a8e.jpg width="400">  
