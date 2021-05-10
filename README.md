@@ -24,19 +24,19 @@ i.MX RT1052 Crossover MCU with ARM Cortex-M7 Core has been used.
 #### 1. Right corner
 <div>
   <img src=https://user-images.githubusercontent.com/72503871/117583612-acc8ea80-b13a-11eb-806e-819e91ac280f.jpg width="430">
-  <img src=https://user-images.githubusercontent.com/72503871/117583590-886d0e00-b13a-11eb-8496-60d036c0fd65.jpg width="430">
+  <img src=https://user-images.githubusercontent.com/72503871/117583590-886d0e00-b13a-11eb-8496-60d036c0fd65.jpg width="430" align="right">
 </div>
 
 #### 2. Left corner
 <div>
   <img src=https://user-images.githubusercontent.com/72503871/117584754-3aa7d400-b141-11eb-938b-c9632a52fc7e.jpg width="430">
-  <img src=https://user-images.githubusercontent.com/72503871/117584750-38de1080-b141-11eb-9671-33c03b1dc788.jpg width="430">
+  <img src=https://user-images.githubusercontent.com/72503871/117584750-38de1080-b141-11eb-9671-33c03b1dc788.jpg width="430" align="right">
 </div>
 
 #### 3. Crossroad
 <div>
   <img src=https://user-images.githubusercontent.com/72503871/117584842-ca4d8280-b141-11eb-9cd6-57859e0bc674.jpg width="430">
-  <img src=https://user-images.githubusercontent.com/72503871/117584844-cc174600-b141-11eb-8c3f-bfcc769f04da.jpg width="430">
+  <img src=https://user-images.githubusercontent.com/72503871/117584844-cc174600-b141-11eb-8c3f-bfcc769f04da.jpg width="430" align="right">
 </div>
 
 
