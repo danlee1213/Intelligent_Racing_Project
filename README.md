@@ -144,3 +144,8 @@ Simply speaking, in the case of right corner, differenceIndex has a positive val
                                                                                                                       
 #### 2. Left corner
 <img src=https://user-images.githubusercontent.com/72503871/117618362-6908cc00-b1a0-11eb-8600-6a383e2d4a8e.jpg width="400">  
+Using same algorithm, in the case of left corner, differenceIndex has a negative value(rightY < leftY). So now camera recognizes it as a left corner and try to move the car to the left based on the servo degree determined by differenceSquaredIndex.
+
+#### 3. Crossroad
+<img src=https://user-images.githubusercontent.com/72503871/117620341-006f1e80-b1a3-11eb-88ae-be3d2d54fc84.jpg width="400">  
+The biggest advantage of this algorithm is that it doesn't need to come up with a new algorithm for the crossroad part. It just behaves sames as straight road, which has almost zero value of differenceIndex. Therefore, when it detects crossroad, it would recognize it as a straight road, moving the car to the straight until it meetes another left or right corner. 
